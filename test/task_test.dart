@@ -18,6 +18,8 @@ void main() {
     });
 
     test('Test process product quantity information and popular brands', () {
+
+      //Arrange
       Map<String, dynamic> expectedProcessedData = {
         'productQuantities':  {'Shoes': 8, 'Forks': 3},
         'productBrands':{'Shoes': {'Air': 2, 'BonPied': 1},
@@ -25,8 +27,10 @@ void main() {
         'totalOrderNumber':4
       };
 
+      //Act
       Map<String, dynamic> actualProcessedData = processData(inputLines);
 
+      //Assert
       expect(actualProcessedData, equals(expectedProcessedData));
     });
 
@@ -37,19 +41,21 @@ void main() {
       // Create a temporary file for testing
       final tempFile = File('test1.csv');
 
-      // Initialize test data
+      // Arrange
       final productQuantities ={'Shoes': 8, 'Forks': 3};
 
       List<String> productNames=productQuantities.keys.toList();
 
-      final expectedOutput = 'Shoes,2.0,\nForks,0.75,\n';
+      final expectedOutput = 'Shoes,2.0\nForks,0.75\n';
 
-      // Call the function
+      // Arrange
       for (String productName in productNames) {
         writeProductQuantity(productQuantities, productName, tempFile,inputLines.length);
       }
       // Read the output file and verify the output
       final outputFileContents = tempFile.readAsStringSync();
+
+      // Assert
       expect(outputFileContents, equals(expectedOutput));
 
       // Cleanup - delete the temporary file
@@ -60,7 +66,7 @@ void main() {
       // Create a temporary file for testing
       final tempFile = File('test2.csv');
 
-      // Initialize test data
+      // Arrange
       final productBrands = {
         'Shoes': {'Air': 2, 'BonPied': 1},
         'Forks': {'Pfitzcraft': 1}
@@ -68,13 +74,13 @@ void main() {
 
       List<String> productNames=productBrands.keys.toList();
 
-      final expectedOutput = 'Shoes,Air,\nForks,Pfitzcraft,\n';
+      final expectedOutput = 'Shoes,Air\nForks,Pfitzcraft\n';
 
-      // Call the function
+      // Act
       for (String productName in productNames) {
         writeProductsMostPopularBrands(productBrands, productName, tempFile);
       }
-      // Read the output file and verify the output
+      // Assert
       final outputFileContents = tempFile.readAsStringSync();
       expect(outputFileContents, equals(expectedOutput));
 

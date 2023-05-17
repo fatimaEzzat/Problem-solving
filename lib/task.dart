@@ -46,13 +46,13 @@ Map<String, dynamic> processData(List<String> inputLines) {
 
 void writeProductQuantity(Map<String, int> productQuantities, String productName, File outputFile, int totalOrderNumber) {
  double avgQuantity = productQuantities[productName]! / totalOrderNumber;
- String line = '$productName,${avgQuantity.toString()},\n';
+ String line = '$productName,${avgQuantity.toString()}\n';
  outputFile.writeAsStringSync(line, mode: FileMode.append);
 }
 
 void writeProductsMostPopularBrands(Map<String, Map<String, int>> productBrands, String productName, File outputFile) {
  String mostPopularBrand = productBrands[productName]!.entries.reduce((a, b) => a.value > b.value ? a : b).key;
- String line = '$productName,$mostPopularBrand,\n';
+ String line = '$productName,$mostPopularBrand\n';
  outputFile.writeAsStringSync(line, mode: FileMode.append);
 }
 
