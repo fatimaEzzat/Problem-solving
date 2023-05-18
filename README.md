@@ -19,7 +19,7 @@ task requremets:
 
 First input file attached with project path with two data symbols
 
-<img width="360" alt="Screenshot 2023-05-18 at 12 06 05 AM" src="https://github.com/fatimaEzzat/Problem-solving/assets/31897018/1218a5b2-4f21-4342-862b-6683efc8033e">
+<img width="360" alt="Screenshot 2023-05-18 at 12 06 05 AM" src="https://github.com/fatimaEzzat/Problem-solving/assets/31897018/918977ec-f64b-4e09-b81c-c6deb0398c8a">
 
 
 ## Steps:
@@ -32,7 +32,7 @@ _ write the processed data to output files (0_orders_data_0.csv,1_orders_data_0.
 
 Average  quantity             |  Most popular brands
 :----------------------------:|:-------------------------:
-<img width="232" alt="Screenshot 2023-05-18 at 12 41 26 AM" src="https://github.com/fatimaEzzat/Problem-solving/assets/31897018/7e8c1311-4e9f-4bb6-84d1-3de263902e63">  | <img width="232" alt="Screenshot 2023-05-18 at 12 44 06 AM" src="https://github.com/fatimaEzzat/Problem-solving/assets/31897018/411b1566-21d3-4d15-a804-badc4d4f2e5b">
+<img width="232" alt="Screenshot 2023-05-18 at 12 43 57 AM" src="https://github.com/fatimaEzzat/Problem-solving/assets/31897018/ca80c80a-77cd-4e5a-bcec-db1913dc5a2b">  | <img width="232" alt="Screenshot 2023-05-18 at 12 44 06 AM" src="https://github.com/fatimaEzzat/Problem-solving/assets/31897018/10d46ac4-c87d-4f22-a40e-c84e69cab764">
 
 ## Tests:
 
