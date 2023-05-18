@@ -1,10 +1,11 @@
 import 'dart:io';
-import 'package:task/task.dart' as task;
 import 'package:path/path.dart' as path;
+import 'package:task/task.dart';
 
 
 
 void main(List<String> arguments) {
+  final task=Task();
  /// 1]read file from console..as lines of strings
   print('Enter file name: ');
   //Read input file name from standard input

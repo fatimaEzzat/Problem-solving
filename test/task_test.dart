@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:path/path.dart' as path;
 
 void main() {
+  final task=Task();
   group('Product Quantity and Brand', () {
     String fileName = 'orders_data_0.csv';
     File inputFile = File(fileName);
@@ -28,7 +29,7 @@ void main() {
       };
 
       //Act
-      Map<String, dynamic> actualProcessedData = processData(inputLines);
+      Map<String, dynamic> actualProcessedData = task.processData(inputLines);
 
       //Assert
       expect(actualProcessedData, equals(expectedProcessedData));
@@ -50,7 +51,7 @@ void main() {
 
       // Arrange
       for (String productName in productNames) {
-        writeProductQuantity(productQuantities, productName, tempFile,inputLines.length);
+        task.writeProductQuantity(productQuantities, productName, tempFile,inputLines.length);
       }
       // Read the output file and verify the output
       final outputFileContents = tempFile.readAsStringSync();
@@ -78,7 +79,7 @@ void main() {
 
       // Act
       for (String productName in productNames) {
-        writeProductsMostPopularBrands(productBrands, productName, tempFile);
+        task.writeProductsMostPopularBrands(productBrands, productName, tempFile);
       }
       // Assert
       final outputFileContents = tempFile.readAsStringSync();
