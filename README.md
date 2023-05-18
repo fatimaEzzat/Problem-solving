@@ -32,8 +32,9 @@ _ write the processed data to output files (0_orders_data_0.csv,1_orders_data_0.
 
 Average  quantity             |  Most popular brands
 :----------------------------:|:-------------------------:
-<img width="232" alt="Screenshot 2023-05-18 at 12 43 57 AM" src="https://github.com/fatimaEzzat/Problem-solving/assets/31897018/ca80c80a-77cd-4e5a-bcec-db1913dc5a2b">  | <img width="232" alt="Screenshot 2023-05-18 at 12 44 06 AM" src="https://github.com/fatimaEzzat/Problem-solving/assets/31897018/10d46ac4-c87d-4f22-a40e-c84e69cab764">
-
+![](../../Desktop/Screenshot_1684350638.png)|
+![](../../Desktop/Screenshot_1684350656.png)|
+![](../../Desktop/Screenshot_1684350662.png)|
 ## Tests:
 
 I have 4 tests :
